@@ -34,6 +34,16 @@ public class TodoItem {
         this.current_date=f.format(new Date());
 	}
 
+	public TodoItem(String category, String title, String desc, String due_date, String date) {
+		// TODO Auto-generated constructor stub
+        this.category=category;
+		this.title=title;
+        this.desc=desc;
+        this.due_date=due_date;
+//        SimpleDateFormat f = new SimpleDateFormat("yyyy/MM/dd kk:mm:ss");
+        this.current_date=date;
+	}
+
 	public String getTitle() {
         return title;
     }
