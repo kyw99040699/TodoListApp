@@ -36,10 +36,8 @@ public class TodoList {
 	}
 
 	public void listAll() {
-		System.out.println("\n"
-				+ "inside list_All method\n");
-		for (TodoItem myitem : list) {
-			System.out.println(myitem.getTitle() + myitem.getDesc());
+		for (TodoItem item : list) {
+			System.out.println("[" + item.getCategory() + "] " + "   Item Title: " + item.getTitle() + "   Item Description:  " + item.getDesc() + "   Due Date: "+ item.getDue_date());
 		}
 	}
 	
@@ -60,5 +58,10 @@ public class TodoList {
 			if (title.equals(item.getTitle())) return true;
 		}
 		return false;
+	}
+
+	public int size() {
+		// TODO Auto-generated method stub
+		return new ArrayList<TodoItem>(list).size();
 	}
 }
